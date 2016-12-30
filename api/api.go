@@ -60,5 +60,8 @@ func getImage(imageName string) (i Image, err error) {
 	}
 
 	err = json.Unmarshal(body, &i)
+	if err != nil {
+		log.Errorf("Failed to unmarshal response to %s", url)
+	}
 	return
 }
