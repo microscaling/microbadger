@@ -1,4 +1,4 @@
-// (c) 2016 Microscaling Systems Ltd
+// (c) 2016 Force12io Ltd
 
 package api
 

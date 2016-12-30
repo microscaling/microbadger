@@ -1,6 +1,6 @@
 // Example use of MicroBadger APIs
 // For more information please see microbadger.com/api
-// (c) 2016 Microscaling Systems Ltd
+// (c) 2016 Force12io Ltd
 package main
 
 import (
