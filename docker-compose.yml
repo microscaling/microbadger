@@ -1,0 +1,64 @@
+version: "3"
+services:
+  api:
+    build: .
+    command: "api"
+    links:
+      - nats
+      - postgres
+    ports:
+      - "8080:8080"
+    env_file: .env
+    environment:
+      - NATS_SEND_QUEUE_NAME=$MB_IMAGE_QUEUE_NAME
+    depends_on:
+      - nats
+      - postgres
+
+  inspector:
+    build: .
+    command: "inspector"
+    links:
+      - nats
+      - postgres
+    env_file: .env
+    environment:
+      - NATS_RECEIVE_QUEUE_NAME=$MB_IMAGE_QUEUE_NAME
+      - NATS_SEND_QUEUE_NAME=$MB_SIZE_QUEUE_NAME
+    depends_on:
+      - nats
+      - postgres
+
+  size:
+    build: .
+    command: "size"
+    links:
+      - nats
+      - postgres
+    env_file: .env
+    environment:
+      - NATS_RECEIVE_QUEUE_NAME=$MB_SIZE_QUEUE_NAME
+    depends_on:
+      - nats
+      - postgres
+
+  notifier:
+    build: .
+    entrypoint: "/notifier"
+    links:
+      - nats
+      - postgres
+    env_file: .env
+    depends_on:
+      - nats
+      - postgres
+
+  nats:
+    image: nats:2.1.7-alpine
+    ports:
+      - "4222"
+
+  postgres:
+    build: postgres
+    ports:
+      - "5432"

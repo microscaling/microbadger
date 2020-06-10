@@ -1,0 +1,99 @@
+# Default values for microbadger-web.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: microbadger
+namespace: default
+port: 8080
+
+api:
+  name: microbadger-api
+  args: api
+  replicas: 3
+
+aws:
+  region: us-west-2
+
+configmap:
+  name: microbadger-config
+
+database:
+  host: microbadger-production.*.us-west-2.rds.amazonaws.com 
+  name: microbadger_production
+  user: microbadger
+
+domains:
+  api: api.microbadger.com
+  hooks: hooks.microbadger.com
+  images: images.microbadger.com
+  website:  microbadger.com
+
+image:
+  pullSecret: quay-deploy-secret
+  registry: quay.io
+  repository: microscaling/microbadger
+  tag: 0.15.17
+
+ingress:
+  enabled: true
+
+inspector:
+  name: inspector
+  args: inspector
+  maxReplicas: 8
+  minReplicas: 2
+
+kms:
+  key: alias/microbadger-production
+
+letsencrypt:
+  issuer: letsencrypt-issuer
+  secret: microbadger-api-letsencrypt
+
+microscaling:
+  name: microscaling
+  image: microscaling/microscaling
+  replicas: 1
+  tag: 0.9.2
+
+notifier:
+  name: notifier
+  command: /notifier
+  enabled: true
+  replicas: 1
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 150Mi
+  requests:
+    cpu: 100m
+    memory: 150Mi
+
+secret:
+  name: microbadger-secret
+  aws:
+    accessKeyID: aws-key
+    secretAccessKey: aws-secret
+  database:
+    password: database-secret
+  github:
+    key: github-key
+    secret: github-secret
+  session: session-secret
+
+size:
+  name: size
+  args: size
+  maxReplicas: 8
+  minReplicas: 2
+
+slack:
+  webhook: https://hooks.slack.com/*
+
+sqs:
+  baseURL: https://sqs.us-west-2.amazonaws.com/*/
+  queues:
+    inspect: microbadger-prod
+    notify: microbadger-prod-notify
+    size: microbadger-prod-size

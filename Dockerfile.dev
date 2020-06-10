@@ -1,0 +1,13 @@
+FROM alpine:3.11
+
+RUN apk add --no-cache ca-certificate
+
+# Add binary and Dockerfile
+COPY microbadger Dockerfile /
+
+# Add OSI license list
+COPY inspector/licenses.json /inspector/
+
+RUN chmod +x /microbadger
+
+ENTRYPOINT ["/microbadger"]
