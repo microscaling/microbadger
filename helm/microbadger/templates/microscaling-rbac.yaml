@@ -1,0 +1,35 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: {{ .Values.microscaling.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.microscaling.name }}
+rules:
+  - apiGroups: ["extensions", "apps"]
+    resources:
+      - deployments
+    verbs:
+      - get
+      - watch
+      - list
+      - patch
+      - update
+
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: {{ .Values.microscaling.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.microscaling.name }}
+subjects:
+  - kind: ServiceAccount
+    name: {{ .Values.microscaling.name }}
+    namespace: {{ .Values.namespace }}
+roleRef:
+  kind: Role
+  name: {{ .Values.microscaling.name }}
+  apiGroup: rbac.authorization.k8s.io

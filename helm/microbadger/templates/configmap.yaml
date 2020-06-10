@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configmap.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.name }}
+data:
+  aws.region: {{ .Values.aws.region }}
+  kms.encryption.key: {{ .Values.kms.key }}
+  mb.api.url: https://{{ .Values.domains.api }}
+  mb.cors.debug: 'false'
+  mb.cors.origin: https://{{ .Values.domains.website }}
+  mb.db.host: {{ .Values.database.host }}
+  mb.db.name:  {{ .Values.database.name }}
+  mb.db.user:  {{ .Values.database.user }}
+  mb.hooks.url: https://{{ .Values.domains.hooks }}
+  mb.site.url: https://{{ .Values.domains.website }}
+  microscaling.config.data: {{ include "microscaling-config" . | quote }}
+  slack.webhook: {{ .Values.slack.webhook }}
+  sqs.inspect.queue:  {{ .Values.sqs.baseURL }}{{ .Values.sqs.queues.inspect }}
+  sqs.notify.queue:  {{ .Values.sqs.baseURL }}{{ .Values.sqs.queues.notify }}
+  sqs.size.queue:  {{ .Values.sqs.baseURL }}{{ .Values.sqs.queues.size }}

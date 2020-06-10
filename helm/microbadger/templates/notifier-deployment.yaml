@@ -1,0 +1,91 @@
+{{ if .Values.notifier.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.notifier.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.notifier.name }}
+spec:
+  replicas: {{ .Values.notifier.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.notifier.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.notifier.name }}
+    spec:
+      imagePullSecrets:
+        - name: {{ .Values.image.pullSecret }}
+      containers:
+        - name:  {{ .Values.notifier.name }}
+          image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          command: [{{ .Values.notifier.command | quote }}]
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.name }}
+                  key: aws.accesskey
+            - name: AWS_REGION
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: aws.region
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.name }}
+                  key: aws.secretkey
+            - name: MB_DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: mb.db.host
+            - name: MB_DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: mb.db.name
+            - name: MB_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.name }}
+                  key: database.password
+            - name: MB_DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: mb.db.user
+            - name: MB_SITE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: mb.site.url
+            - name: MB_WEBHOOK_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: mb.hooks.url
+            - name: SLACK_WEBHOOK
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: slack.webhook
+            - name: SQS_NOTIFY_QUEUE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: sqs.notify.queue
+          imagePullPolicy: IfNotPresent
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+          securityContext:
+            privileged: false
+          terminationMessagePath: /dev/termination-log
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+{{ end }}

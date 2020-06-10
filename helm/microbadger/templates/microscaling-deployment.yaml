@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.microscaling.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.microscaling.name }}
+spec:
+  replicas: {{ .Values.microscaling.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.microscaling.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.microscaling.name }}
+    spec:
+      serviceAccountName: {{ .Values.microscaling.name }}
+      containers:
+        - name: {{ .Values.microscaling.name }}
+          image: "{{ .Values.microscaling.image }}:{{ .Values.microscaling.tag }}"
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.name }}
+                  key: aws.accesskey
+            - name: AWS_REGION
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: aws.region
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.name }}
+                  key: aws.secretkey
+            - name: MSS_SCHEDULER
+              value: "KUBERNETES"
+            - name: MSS_DEMAND_ENGINE
+              value: "LOCAL"
+            - name: MSS_MONITOR
+              value: "none"
+            - name: MSS_SEND_METRICS_TO_API
+              value: "false"
+            - name: MSS_CONFIG
+              value: "ENVVAR"
+            - name: MSS_CONFIG_DATA
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Values.configmap.name }}
+                  key: microscaling.config.data
+          imagePullPolicy: Always
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+          securityContext:
+            privileged: false
+          terminationMessagePath: /dev/termination-log
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

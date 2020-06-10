@@ -1,0 +1,34 @@
+{{ define "microscaling-config" }}
+{
+    "user": "microscaling",
+    "maxContainers": 10,
+    "apps": [
+      {
+        "name": {{ .Values.inspector.name | quote }},
+        "appType": "Kubernetes",
+        "ruleType": "SimpleQueue",
+        "metricType": "SQS",
+        "priority": 1,
+        "maxContainers": {{ .Values.inspector.maxReplicas }},
+        "minContainers": {{ .Values.inspector.minReplicas }},
+        "config": {
+          "queueURL": "{{ .Values.sqs.baseURL }}{{ .Values.sqs.queues.inspect }}",
+          "targetQueueLength": 2
+        }
+      },
+      {
+        "name": {{ .Values.size.name | quote }},
+        "appType": "Kubernetes",
+        "ruleType": "SimpleQueue",
+        "metricType": "SQS",
+        "priority": 2,
+        "maxContainers": {{ .Values.size.maxReplicas }},
+        "minContainers": {{ .Values.size.minReplicas }},
+        "config": {
+          "queueURL": "{{ .Values.sqs.baseURL }}{{ .Values.sqs.queues.size }}",
+          "targetQueueLength": 2
+        }
+      }
+    ]
+}
+{{ end }}

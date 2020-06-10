@@ -1,0 +1,392 @@
+[
+  {
+    "Code": "AFL-3.0",
+    "Name": "Academic Free License 3.0",
+    "URL": "https://opensource.org/licenses/AFL-3.0"
+  },
+  {
+    "Code": "APL-1.0",
+    "Name": "Adaptive Public License",
+    "URL": "https://opensource.org/licenses/APL-1.0"
+  },
+  {
+    "Code": "Apache-2.0",
+    "Name": "Apache License 2.0",
+    "URL": "https://opensource.org/licenses/Apache-2.0"
+  },
+  {
+    "Code": "APSL-2.0",
+    "Name": "Apple Public Source License",
+    "URL": "https://opensource.org/licenses/APSL-2.0"
+  },
+  {
+    "Code": "Artistic-2.0",
+    "Name": "Artistic license 2.0",
+    "URL": "https://opensource.org/licenses/Artistic-2.0"
+  },
+  {
+    "Code": "AAL",
+    "Name": "Attribution Assurance Licenses",
+    "URL": "https://opensource.org/licenses/AAL"
+  },
+  {
+    "Code": "BSD-3-Clause",
+    "Name": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "URL": "https://opensource.org/licenses/BSD-3-Clause"
+  },
+  {
+    "Code": "BSD-2-Clause",
+    "Name": "BSD 2-Clause \"Simplified\" or \"FreeBSD\" License",
+    "URL": "https://opensource.org/licenses/BSD-2-Clause"
+  },
+  {
+    "Code": "BSL-1.0",
+    "Name": "Boost Software License",
+    "URL": "https://opensource.org/licenses/BSL-1.0"
+  },
+  {
+    "Code": "CECILL-2.1",
+    "Name": "CeCILL License 2.1",
+    "URL": "https://opensource.org/licenses/CECILL-2.1"
+  },
+  {
+    "Code": "CATOSL-1.1",
+    "Name": "Computer Associates Trusted Open Source License 1.1",
+    "URL": "https://opensource.org/licenses/CATOSL-1.1"
+  },
+  {
+    "Code": "CDDL-1.0",
+    "Name": "Common Development and Distribution License 1.0",
+    "URL": "https://opensource.org/licenses/CDDL-1.0"
+  },
+  {
+    "Code": "CPAL-1.0",
+    "Name": "Common Public Attribution License 1.0",
+    "URL": "https://opensource.org/licenses/CPAL-1.0"
+  },
+  {
+    "Code": "CUA-OPL-1.0",
+    "Name": "CUA Office Public License Version 1.0",
+    "URL": "https://opensource.org/licenses/CUA-OPL-1.0"
+  },
+  {
+    "Code": "EUDatagrid",
+    "Name": "EU DataGrid Software License",
+    "URL": "https://opensource.org/licenses/EUDatagrid"
+  },
+  {
+    "Code": "EPL-1.0",
+    "Name": "Eclipse Public License 1.0",
+    "URL": "https://opensource.org/licenses/EPL-1.0"
+  },
+  {
+    "Code": "eCos-2.0",
+    "Name": "eCos License version 2.0",
+    "URL": "https://opensource.org/licenses/eCos-2.0"
+  },
+  {
+    "Code": "ECL-2.0",
+    "Name": "Educational Community License, Version 2.0",
+    "URL": "https://opensource.org/licenses/ECL-2.0"
+  },
+  {
+    "Code": "EFL-2.0",
+    "Name": "Eiffel Forum License V2.0",
+    "URL": "https://opensource.org/licenses/EFL-2.0"
+  },
+  {
+    "Code": "Entessa",
+    "Name": "Entessa Public License",
+    "URL": "https://opensource.org/licenses/Entessa"
+  },
+  {
+    "Code": "EUPL-1.1",
+    "Name": "European Union Public License, Version 1.1",
+    "URL": "https://opensource.org/licenses/EUPL-1.1"
+  },
+  {
+    "Code": "Fair",
+    "Name": "Fair License",
+    "URL": "https://opensource.org/licenses/Fair"
+  },
+  {
+    "Code": "Frameworx-1.0",
+    "Name": "Frameworx License",
+    "URL": "https://opensource.org/licenses/Frameworx-1.0"
+  },
+  {
+    "Code": "FPL-1.0.0",
+    "Name": "Free Public License 1.0.0",
+    "URL": "https://opensource.org/licenses/FPL-1.0.0"
+  },
+  {
+    "Code": "AGPL-3.0",
+    "Name": "GNU Affero General Public License v3",
+    "URL": "https://opensource.org/licenses/AGPL-3.0"
+  },
+  {
+    "Code": "GPL-2.0",
+    "Name": "GNU General Public License version 2.0",
+    "URL": "https://opensource.org/licenses/GPL-2.0"
+  },
+  {
+    "Code": "GPLv2",
+    "Name": "GNU General Public License version 2.0",
+    "URL": "https://opensource.org/licenses/GPL-2.0"
+  },
+  {
+    "Code": "GPL-3.0",
+    "Name": "GNU General Public License version 3.0",
+    "URL": "https://opensource.org/licenses/GPL-3.0"
+  },
+  {
+    "Code": "GPLv3",
+    "Name": "GNU General Public License version 3.0",
+    "URL": "https://opensource.org/licenses/GPL-3.0"
+  },
+  {
+    "Code": "LGPL-2.1",
+    "Name": "GNU Library or \"Lesser\" General Public License version 2.1",
+    "URL": "https://opensource.org/licenses/LGPL-2.1"
+  },
+  {
+    "Code": "LGPL-3.0",
+    "Name": "GNU Library or \"Lesser\" General Public License version 3.0",
+    "URL": "https://opensource.org/licenses/LGPL-3.0"
+  },
+  {
+    "Code": "HPND",
+    "Name": "Historical Permission Notice and Disclaimer",
+    "URL": "https://opensource.org/licenses/HPND"
+  },
+  {
+    "Code": "IPL-1.0",
+    "Name": "IBM Public License 1.0",
+    "URL": "https://opensource.org/licenses/IPL-1.0"
+  },
+  {
+    "Code": "IPA",
+    "Name": "IPA Font License",
+    "URL": "https://opensource.org/licenses/IPA"
+  },
+  {
+    "Code": "ISC",
+    "Name": "ISC License",
+    "URL": "https://opensource.org/licenses/ISC"
+  },
+  {
+    "Code": "LPPL-1.3c",
+    "Name": "LaTeX Project Public License 1.3c",
+    "URL": "https://opensource.org/licenses/LPPL-1.3c"
+  },
+  {
+    "Code": "LiLiQ-P-1.1",
+    "Name": "Licence Libre du QuÃ©bec â Permissive",
+    "URL": "https://opensource.org/licenses/LiLiQ-P-1.1"
+  },
+  {
+    "Code": "LiLiQ-R-1.1",
+    "Name": "Licence Libre du QuÃ©bec â RÃ©ciprocitÃ©",
+    "URL": "https://opensource.org/licenses/LiLiQ-R-1.1"
+  },
+  {
+    "Code": "LiLiQ-Rplus-1.1",
+    "Name": "Licence Libre du QuÃ©bec â RÃ©ciprocitÃ© forte",
+    "URL": "https://opensource.org/licenses/LiLiQ-Rplus-1.1"
+  },
+  {
+    "Code": "LPL-1.02",
+    "Name": "Lucent Public License Version 1.02",
+    "URL": "https://opensource.org/licenses/LPL-1.02"
+  },
+  {
+    "Code": "MirOS",
+    "Name": "MirOS Licence",
+    "URL": "https://opensource.org/licenses/MirOS"
+  },
+  {
+    "Code": "MS-PL",
+    "Name": "Microsoft Public License",
+    "URL": "https://opensource.org/licenses/MS-PL"
+  },
+  {
+    "Code": "MS-RL",
+    "Name": "Microsoft Reciprocal License",
+    "URL": "https://opensource.org/licenses/MS-RL"
+  },
+  {
+    "Code": "MIT",
+    "Name": "MIT license",
+    "URL": "https://opensource.org/licenses/MIT"
+  },
+  {
+    "Code": "Motosoto",
+    "Name": "Motosoto License",
+    "URL": "https://opensource.org/licenses/Motosoto"
+  },
+  {
+    "Code": "MPL-2.0",
+    "Name": "Mozilla Public License 2.0",
+    "URL": "https://opensource.org/licenses/MPL-2.0"
+  },
+  {
+    "Code": "Multics",
+    "Name": "Multics License",
+    "URL": "https://opensource.org/licenses/Multics"
+  },
+  {
+    "Code": "NASA-1.3",
+    "Name": "NASA Open Source Agreement 1.3",
+    "URL": "https://opensource.org/licenses/NASA-1.3"
+  },
+  {
+    "Code": "NTP",
+    "Name": "NTP License",
+    "URL": "https://opensource.org/licenses/NTP"
+  },
+  {
+    "Code": "Naumen",
+    "Name": "Naumen Public License",
+    "URL": "https://opensource.org/licenses/Naumen"
+  },
+  {
+    "Code": "NGPL",
+    "Name": "Nethack General Public License",
+    "URL": "https://opensource.org/licenses/NGPL"
+  },
+  {
+    "Code": "Nokia",
+    "Name": "Nokia Open Source License",
+    "URL": "https://opensource.org/licenses/Nokia"
+  },
+  {
+    "Code": "NPOSL-3.0",
+    "Name": "Non-Profit Open Software License 3.0",
+    "URL": "https://opensource.org/licenses/NPOSL-3.0"
+  },
+  {
+    "Code": "OCLC-2.0",
+    "Name": "OCLC Research Public License 2.0",
+    "URL": "https://opensource.org/licenses/OCLC-2.0"
+  },
+  {
+    "Code": "OGTSL",
+    "Name": "Open Group Test Suite License",
+    "URL": "https://opensource.org/licenses/OGTSL"
+  },
+  {
+    "Code": "OSL-3.0",
+    "Name": "Open Software License 3.0",
+    "URL": "https://opensource.org/licenses/OSL-3.0"
+  },
+  {
+    "Code": "OPL-2.1",
+    "Name": "OSET Public License version 2.1",
+    "URL": "https://opensource.org/licenses/OPL-2.1"
+  },
+  {
+    "Code": "PHP-3.0",
+    "Name": "PHP License 3.0",
+    "URL": "https://opensource.org/licenses/PHP-3.0"
+  },
+  {
+    "Code": "PostgreSQL",
+    "Name": "The PostgreSQL License",
+    "URL": "https://opensource.org/licenses/PostgreSQL"
+  },
+  {
+    "Code": "Python-2.0",
+    "Name": "Python License",
+    "URL": "https://opensource.org/licenses/Python-2.0"
+  },
+  {
+    "Code": "CNRI-Python",
+    "Name": "CNRI Python license",
+    "URL": "https://opensource.org/licenses/CNRI-Python"
+  },
+  {
+    "Code": "QPL-1.0",
+    "Name": "Q Public License",
+    "URL": "https://opensource.org/licenses/QPL-1.0"
+  },
+  {
+    "Code": "RPSL-1.0",
+    "Name": "RealNetworks Public Source License V1.0",
+    "URL": "https://opensource.org/licenses/RPSL-1.0"
+  },
+  {
+    "Code": "RPL-1.5",
+    "Name": "Reciprocal Public License 1.5",
+    "URL": "https://opensource.org/licenses/RPL-1.5"
+  },
+  {
+    "Code": "RSCPL",
+    "Name": "Ricoh Source Code Public License",
+    "URL": "https://opensource.org/licenses/RSCPL"
+  },
+  {
+    "Code": "OFL-1.1",
+    "Name": "SIL Open Font License 1.1",
+    "URL": "https://opensource.org/licenses/OFL-1.1"
+  },
+  {
+    "Code": "SimPL-2.0",
+    "Name": "Simple Public License 2.0",
+    "URL": "https://opensource.org/licenses/SimPL-2.0"
+  },
+  {
+    "Code": "Sleepycat",
+    "Name": "Sleepycat License",
+    "URL": "https://opensource.org/licenses/Sleepycat"
+  },
+  {
+    "Code": "SPL-1.0",
+    "Name": "Sun Public License 1.0",
+    "URL": "https://opensource.org/licenses/SPL-1.0"
+  },
+  {
+    "Code": "Watcom-1.0",
+    "Name": "Sybase Open Watcom Public License 1.0",
+    "URL": "https://opensource.org/licenses/Watcom-1.0"
+  },
+  {
+    "Code": "NCSA",
+    "Name": "University of Illinois/NCSA Open Source License",
+    "URL": "https://opensource.org/licenses/NCSA"
+  },
+  {
+    "Code": "UPL",
+    "Name": "Universal Permissive License",
+    "URL": "https://opensource.org/licenses/UPL"
+  },
+  {
+    "Code": "VSL-1.0",
+    "Name": "Vovida Software License v. 1.0",
+    "URL": "https://opensource.org/licenses/VSL-1.0"
+  },
+  {
+    "Code": "W3C",
+    "Name": "W3C License",
+    "URL": "https://opensource.org/licenses/W3C"
+  },
+  {
+    "Code": "WXwindows",
+    "Name": "wxWindows Library License",
+    "URL": "https://opensource.org/licenses/WXwindows"
+  },
+  {
+    "Code": "Xnet",
+    "Name": "X.Net License",
+    "URL": "https://opensource.org/licenses/Xnet"
+  },
+  {
+    "Code": "ZPL-2.0",
+    "Name": "Zope Public License 2.0",
+    "URL": "https://opensource.org/licenses/ZPL-2.0"
+  },
+  {
+    "Code": "Zlib",
+    "Name": "zlib/libpng license",
+    "URL": "https://opensource.org/licenses/Zlib"
+  }
+]

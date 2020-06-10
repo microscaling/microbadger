@@ -1,0 +1,43 @@
+{{ if .Values.ingress.enabled }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Values.api.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.api.name }}
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/tls-acme: "true"
+    certmanager.k8s.io/issuer: {{ .Values.letsencrypt.issuer }}
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+  - hosts:
+    - {{ .Values.domains.api }}
+    - {{ .Values.domains.hooks }}
+    - {{ .Values.domains.images }}
+    secretName: {{ .Values.letsencrypt.secret}}
+  rules:
+  - host: {{ .Values.domains.api }}
+    http:
+      paths:
+      - path: /
+        backend:
+            serviceName: {{ .Values.api.name }}
+            servicePort: 80
+  - host: {{ .Values.domains.hooks }}
+    http:
+      paths:
+      - path: /
+        backend:
+            serviceName: {{ .Values.api.name }}
+            servicePort: 80
+  - host: {{ .Values.domains.images }}
+    http:
+      paths:
+      - path: /
+        backend:
+            serviceName: {{ .Values.api.name }}
+            servicePort: 80
+{{ end }}
