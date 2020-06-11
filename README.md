@@ -31,5 +31,5 @@ We'd love to get contributions from you! Please see [CONTRIBUTING.md](https://gi
 
 ## Contact Us
 
-We'd love to hear from you at [hello@microscaling.com](mailto:hello@microscaling.com) or on Twitter at [@microscaling](http://twitter.com/microscaling). 
+We are on Twitter at [@microscaling](http://twitter.com/microscaling). 
 And we welcome new [issues](https://github.com/microscaling/microbadger/issues) or pull requests!
